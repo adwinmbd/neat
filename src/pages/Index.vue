@@ -1,18 +1,15 @@
 <template>
   <Layout>
     <div class="container">
-      <h1>List articles</h1>
-      <div v-for="article in $page.articles.edges" :key="article.id" class="article d-flex">
+      <h1>List posts</h1>
+      <div v-for="post in $page.posts.edges" :key="post.id" class="post d-flex">
         <div>
-          <div
-            class="article__img"
-            :style="{ 'background-image': 'url(' + article.node.image + ')' }"
-          ></div>
+          <div class="post__img" :style="{ 'background-image': 'url(' + post.node.image + ')' }"></div>
         </div>
-        <div class="article__body">
-          <g-link :to="article.node.path" class="article__link"></g-link>
-          <h1 class="article__title">{{article.node.title}}</h1>
-          <p class="article__abstract">{{article.node.abstract}}</p>
+        <div class="post__body">
+          <g-link :to="post.node.path" class="post__link"></g-link>
+          <h1 class="post__title">{{post.node.title}}</h1>
+          <p class="post__abstract">{{post.node.abstract}}</p>
         </div>
       </div>
     </div>
@@ -20,7 +17,7 @@
 </template>
 <page-query>
 query {
-  articles: allPost {
+  posts: allPost {
     edges {
       node {
         title
@@ -40,7 +37,7 @@ export default {
 };
 </script>
 <style>
-.article {
+.post {
   display: flex;
   align-items: center;
   box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.15);
@@ -50,24 +47,24 @@ export default {
   background-color: #fff;
 }
 @media screen and (max-width: 992px) {
-  .article {
+  .post {
     display: block;
   }
 }
-.article__title {
+.post__title {
   margin-top: 0;
 }
-.article__body {
+.post__body {
   padding: 15px 30px;
 }
-.article__link {
+.post__link {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
-.article__img {
+.post__img {
   width: 250px;
   height: 140px;
   background-size: cover;
@@ -76,7 +73,7 @@ export default {
   margin-right: 15px;
 }
 @media screen and (max-width: 992px) {
-  .article__img {
+  .post__img {
     width: 100%;
     height: 180px;
   }

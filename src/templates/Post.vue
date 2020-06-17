@@ -1,11 +1,8 @@
 <template>
   <Layout>
-    <div class="articlePage">
-      <div
-        class="articlePage__img"
-        :style="{ 'background-image': 'url(' + $page.article.image + ')' }"
-      ></div>
-      <div class="container container--article">
+    <div class="postPage">
+      <div class="postPage__img" :style="{ 'background-image': 'url(' + $page.post.image + ')' }"></div>
+      <div class="container container--post">
         <g-link to="/" class="back">
           <svg
             aria-hidden="true"
@@ -23,17 +20,17 @@
             />
           </svg>Back
         </g-link>
-        <h1 class="articlePage__title">{{$page.article.title}}</h1>
-        <p>{{$page.article.author}}</p>
-        <p>{{$page.article.date}}</p>
-        <div v-html="$page.article.content"></div>
+        <h1 class="postPage__title">{{$page.post.title}}</h1>
+        <p>{{$page.post.author}}</p>
+        <p>{{$page.post.date}}</p>
+        <div v-html="$page.post.content"></div>
       </div>
     </div>
   </Layout>
 </template>
 <page-query>
 query ($path: String!) {
-  article: post (path: $path) {
+  post: post (path: $path) {
     title
     content
     author
@@ -46,13 +43,13 @@ export default {
   components: {},
   metaInfo() {
     return {
-      title: this.$page.article.title
+      title: this.$page.post.title
     };
   }
 };
 </script>
 <style>
-.container--article {
+.container--post {
   margin-top: -140px;
   background-color: #fff;
   border-radius: 8px;
@@ -60,11 +57,11 @@ export default {
   margin-bottom: 100px;
 }
 @media screen and (max-width: 992px) {
-  .container--article {
+  .container--post {
     padding: 15px 20px;
   }
 }
-.articlePage__img {
+.postPage__img {
   width: 100%;
   height: 400px;
   background-size: cover;
