@@ -9,11 +9,11 @@ local_backend: true # In root folder enter npx netlify-cms-proxy-server
 # publish_mode: editorial_workflow
 
 media_folder: '_output/assets/img' # Media files will be stored in the repo under assets/img
-public_folder: 'assets/img'
+public_folder: '/assets/img'
 
 collections:
   # Our blog posts
-  - name: 'posts' # Used in routes, e.g., /admin/collections/blog
+  - name: 'posts' # Used in routes, e.g., /admin/collections/posts
     label: 'Post' # Used in the UI
     folder: 'posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
