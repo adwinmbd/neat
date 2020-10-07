@@ -9,19 +9,20 @@ local_backend: true # In root folder enter npx netlify-cms-proxy-server
 # publish_mode: editorial_workflow
 
 media_folder: '_output/assets/img' # Media files will be stored in the repo under assets/img
-public_folder: '_output/uploads'
+public_folder: '/assets/img'
 
 collections:
   # Our blog posts
-  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+  - name: 'posts' # Used in routes, e.g., /admin/collections/blog
     label: 'Post' # Used in the UI
     folder: 'posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Summary', name: 'summary', widget: 'text' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['post'] }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   # Our pages e.g. About
@@ -29,7 +30,7 @@ collections:
     label: 'Page'
     folder: 'pages'
     create: false # Change to true to allow editors to create new pages
-    slug: ''
+    slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
