@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  branch: adwinmbd/netblog # Branch to update (optional; defaults to master)
 
 # Enable netlify CMS Admin in localhost
 local_backend: true # In root folder enter npx netlify-cms-proxy-server
