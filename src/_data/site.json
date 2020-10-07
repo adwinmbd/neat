@@ -1,0 +1,7 @@
+{
+  "name": "Lorem",
+  "url": "https://example.com",
+  "title": "Net11ty",
+  "description": "Web site created using create-snowpack-app and 11ty",
+  "author": "John Doe"
+}

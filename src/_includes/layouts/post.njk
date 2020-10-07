@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+
+<div>
+    <h1>
+        {{ title }}
+    </h1>
+
+    {% if image %}
+        <img src="/assets/img/{{ image }}">
+    {% endif %}
+
+    {{ content | safe}}
+
+    <span class="post-date">
+        {{ date.toDateString() }}
+        by
+        {% if author %}
+            {{ author }}
+        {% else %}
+            {{ site.author }}
+        {% endif %}
+    </span>
+</div>

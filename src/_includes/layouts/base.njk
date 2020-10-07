@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/assets/img/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="{{ site.description }}"/>
+    <link href="/assets/css/site.css" rel="stylesheet"/>
+    <link href="/assets/css/syntax.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>
+      {{ site.title }}
+      -
+      {{ title }}
+    </title>
+    <!-- Begin SEO tag -->
+    <meta name="author" content="{{ site.author }}"/>
+    {#<link rel="canonical" href="http://github.io/" />#}
+    <script type="application/ld+json">
+      {
+        "@type": "WebSite",
+        "headline": "Home",
+        "url": "https://github.com/",
+        "name": "Snogrange",
+        "author": {
+          "@type": "Person",
+          "name": "Anonymous"
+        },
+        "description": "a minimalist Blog theme",
+        "@context": "https://schema.org"
+      }
+    </script>
+    <!-- End SEO tag -->
+  </head>
+  <body>
+    <div class="container">
+      {% include 'header.njk' %}
+      <div class="post-container">
+        {{ content | safe }}
+      </div>
+      {% include 'footer.njk' %}
+    </div>
+  </body>
+</html>
