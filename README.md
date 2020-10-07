@@ -22,6 +22,7 @@ The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 Open http://localhost:8080/admin/ to view the netlify admin page in the browser.
+Run `npx netlify-cms-proxy-server` to view the netlify admin page in the browser on localhost.
 
 ### npm run build
 

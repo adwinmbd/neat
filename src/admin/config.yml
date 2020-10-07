@@ -8,7 +8,8 @@ local_backend: true # In root folder enter npx netlify-cms-proxy-server
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
-media_folder: '_output/assets/img' # Media files will be stored in the repo under images/uploads
+media_folder: '_output/assets/img' # Media files will be stored in the repo under assets/img
+public_folder: '_output/uploads'
 
 collections:
   # Our blog posts
