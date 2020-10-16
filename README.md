@@ -1,15 +1,15 @@
-# Net11ty
+# Anonymous
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
 It contains :
 
-- About page
+- Blog page
 - Blog post page
 - Contact page
 - Home page
 
-![Home page](net11ty.png)
+![Home page](anonymous.png)
 
 ## Available Scripts
 
@@ -21,9 +21,6 @@ Open http://localhost:8080 to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-Open http://localhost:8080/admin/ to view the netlify admin page in the browser.
-Run `npx netlify-cms-proxy-server` to view the netlify admin page in the browser on localhost.
-
 ### npm run build
 
 Builds a static copy of your site to the `build/` folder.
@@ -34,3 +31,7 @@ Your app is ready to be deployed!
 ### Q: What about Eject?
 
 No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+
+## Todo
+
+- [ ] Remove pages variable in navbar

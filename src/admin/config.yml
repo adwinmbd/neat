@@ -1,40 +1,42 @@
 backend:
-  name: github
-  repo: adwinmbd/netblog # Branch to update (optional; defaults to master)
-
-# Enable netlify CMS Admin in localhost
-local_backend: true # In root folder enter npx netlify-cms-proxy-server
+  name: "git-gateway"
+  branch: "main" # Branch to update (optional; defaults to master)
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
-media_folder: '_output/assets/img' # Media files will be stored in the repo under assets/img
-# public_folder: '/assets/img'
+# Enable netlify CMS Admin in localhost
+local_backend: true # In root folder enter npx netlify-cms-proxy-server
+
+media_folder: "src/assets/img" # Media files will be stored in the repo under src/assets/img
+public_folder: "/assets/img" # The src attribute for uploaded media will begin with assets/img
 
 collections:
   # Our blog posts
-  - name: 'posts' # Used in routes, e.g., /admin/collections/posts
-    label: 'Post' # Used in the UI
-    folder: 'posts' # The path to the folder where the documents are stored
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    # slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Tags', name: 'tags', widget: 'list', default: ['post'] }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: Image, name: image, widget: image }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      # - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Content", name: "body", widget: "markdown" }
+      # - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Save as Draft", name: "draft", required: false, widget: "boolean", default: true }
   # Our pages e.g. About
-  - name: 'pages'
-    label: 'Page'
-    folder: 'pages'
-    create: false # Change to true to allow editors to create new pages
-    slug: '{{slug}}'
+  - name: "pages"
+    label: "Page"
+    folder: "src/pages"
+    delete: false
+    create: true # Change to true to allow editors to create new pages
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Permalink', name: 'permalink', widget: 'string' }
-      - { label: 'Navigation Title', name: 'navtitle', widget: 'string' }
-      - { label: 'Tags', name: 'tags', widget: 'hidden', default: 'nav' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: Image, name: image, widget: image }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
+      # - { label: "Tags", name: "tags", widget: "hidden", default: "nav" }
+      # - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/content.njk"}

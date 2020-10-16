@@ -1,7 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('admin');
-  eleventyConfig.addPassthroughCopy('uploads');
 
   return {
     templateFormats: [
@@ -17,7 +16,11 @@ module.exports = function (eleventyConfig) {
       'txt',
       'yml',
     ],
+    // templateFormats: ["md", "njk", "html", "liquid"],
     htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
+    // dataTemplateEngine: "njk",
+    // passthroughFileCopy: true,
     dir: {
       input: 'src',
       output: '_output',

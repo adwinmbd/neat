@@ -2,24 +2,13 @@
 layout: layouts/base.njk
 ---
 
-<div>
-    <h1>
-        {{ title }}
-    </h1>
+{% if image %}
+    {% include "banner.njk" %}
+{% endif %}
 
-    {% if image %}
-        <img src="/assets/img/{{ image }}">
-    {% endif %}
+<h1>{{ title }}</h1>
 
-    {{ content | safe}}
-
-    <span class="post-date">
-        {{ date.toDateString() }}
-        by
-        {% if author %}
-            {{ author }}
-        {% else %}
-            {{ site.author }}
-        {% endif %}
-    </span>
-</div>
+{{ content | safe }}
+<span class="post-date">
+    {{ date.toDateString() }}
+</span>

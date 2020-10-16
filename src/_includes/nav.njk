@@ -1,0 +1,19 @@
+<nav class="main-nav nav">
+    <a href="/" class="nav-logo">Logo.</a>
+    <ul class="nav-list">
+        {# <li>
+            <a href="/contact">Contact</a>
+        </li> #}
+        {% for post in collections.nav %}
+            <li>
+                {% if page.url == post.url%}
+                    {{ post.fileSlug | capitalize }}
+                {% else %}
+                    <a href="{{ post.url | url}}">{{ post.fileSlug | capitalize }}</a>
+                {% endif %}
+            </li>
+            &nbsp;
+            {# {{ post.url | log }} #}
+        {% endfor %}
+    </ul>
+</nav>

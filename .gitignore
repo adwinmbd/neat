@@ -1,6 +1,5 @@
 .build
 build
+_output
 web_modules
 node_modules
-package-lock.json
-_output
