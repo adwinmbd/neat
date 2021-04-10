@@ -1,6 +1,6 @@
 const path = require("path");
 const yaml = require("js-yaml");
-const fs = require("fs/promises");
+const fs = require("fs").promises;
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
