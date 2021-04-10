@@ -1,0 +1,19 @@
+{# Base HTML, compatible with what Vite expects #}
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.njk" %}
+<body>
+   {% include "header.html" %}
+
+   {{ content | safe }}
+
+    {% include "banner.html" %}
+
+    {% include "footer.html" %}
+    {% if path == "home" %}
+      <!-- Netlify Identity Widget -->
+      <!-- Needed only if you are using Netlify Identity feature -->
+      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% endif %}
+</body>
+</html>

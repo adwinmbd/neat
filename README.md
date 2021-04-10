@@ -1,37 +1,52 @@
-# Anonymous
+# Eleventy Tailwind with Vite
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+This is a template (or demo) for integrating [Vite](https://vitejs.dev) with [Eleventy](https://www.11ty.dev/). This allows you to use Vite for bundling and Eleventy for building static pages. It uses [Tailwind](https://tailwindcss.com) for styling and [Alpine](https://github.com/alpinejs/alpine) for some Javascript magic.
 
-It contains :
+![screenshot](etav.png)
 
-- Blog page
-- Blog post page
-- Contact page
-- Home page
+### Clone template
 
-![Home page](anonymous.png)
+In an empty folder run `npx degit adwinmbd/eleventy-tailwind-vite-template#main`
 
-## Available Scripts
+### Install:
 
-### npm start
+```
+npm install
+```
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+### To run:
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+```
+npm start
+```
 
-### npm run build
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+### To build:
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" or "@snowpack/plugin-parcel" to your `snowpack.config.json` config file.
+```
+npm run build
+```
 
-### Q: What about Eject?
+### To lint:
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+```
+npm run lint
+```
 
-## Todo
+### To lint:
 
-- [ ] Remove pages variable in navbar
+```
+npm run format
+```
+
+### Todo
+
+- [ ] Make @hotwired/turbo play nice with the template
+
+### References
+
+- [Tailblocks](https://tailblocks.cc)
+- [Wicked Templates](https://blocks.wickedtemplates.com)
+- [Surijith S M](https://github.com/surjithctly/neat-starter)
+- [Fotis Papadogeorgopoulous](https://github.com/fpapado/eleventy-with-vite)

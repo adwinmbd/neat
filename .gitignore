@@ -1,5 +1,6 @@
-.build
-build
-_output
-web_modules
 node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+_site
