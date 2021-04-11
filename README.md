@@ -2,7 +2,7 @@
 
 This is a template (or demo) for integrating [Vite](https://vitejs.dev) with [Eleventy](https://www.11ty.dev/). This allows you to use Vite for bundling and Eleventy for building static pages. It uses [Tailwind](https://tailwindcss.com) for styling and [Alpine](https://github.com/alpinejs/alpine) for some Javascript magic.
 
-![screenshot](etav.png)
+![screenshot](neat.png)
 
 ### Clone template
 
