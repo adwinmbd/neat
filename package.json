@@ -21,7 +21,7 @@
     "postcss": "^8.2.8",
     "postcss-preset-env": "latest",
     "prettier": "latest",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.25.0",
     "rimraf": "latest",
     "serve": "latest",
     "tailwindcss": "latest",
